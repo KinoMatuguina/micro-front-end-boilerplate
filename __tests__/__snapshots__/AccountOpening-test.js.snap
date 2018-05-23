@@ -1,0 +1,338 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Maintinance services should load bundle and match on snapshots 1`] = `
+Array [
+  Object {
+    "bundleName": "BUNDLE 1",
+    "bundlePhoto": null,
+    "financialInstitution": "BPI FAMILY SAVINGS",
+    "id": "001",
+    "isOfferred": true,
+  },
+  Object {
+    "bundleName": "BUNDLE 2",
+    "bundlePhoto": null,
+    "financialInstitution": "BPI FAMILY SAVINGS",
+    "id": "002",
+    "isOfferred": true,
+  },
+  Object {
+    "bundleName": "BUNDLE 3",
+    "bundlePhoto": null,
+    "financialInstitution": "BPI FAMILY SAVINGS",
+    "id": "003",
+    "isOfferred": true,
+  },
+]
+`;
+
+exports[`Maintinance services should load country and match on snapshots 1`] = `
+Array [
+  Object {
+    "auditUserCd": null,
+    "cd": "PHILIPPINES",
+    "correlationId": null,
+    "countryCd": "63",
+    "createdBy": "SYSTEM",
+    "createdDate": 1494829679231,
+    "del": false,
+    "dscp": "PHILIPPINES",
+    "id": "001",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+]
+`;
+
+exports[`Maintinance services should load financial institution image and match on snapshots 1`] = `
+Array [
+  Object {
+    "financialInstitution": "BPI FAMILY SAVINGS",
+    "logo": null,
+  },
+]
+`;
+
+exports[`Maintinance services should load nationality and match on snapshots 1`] = `
+Array [
+  Object {
+    "auditUserCd": null,
+    "cd": "FIL",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1494843868152,
+    "del": false,
+    "dscp": "FILIPINO",
+    "id": "001",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+  Object {
+    "auditUserCd": null,
+    "cd": "AME",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1494843868165,
+    "del": false,
+    "dscp": "AMERICAN",
+    "id": "002",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+]
+`;
+
+exports[`Maintinance services should load natureOfBusiness and match on snapshots 1`] = `
+Array [
+  Object {
+    "auditUserCd": null,
+    "cd": "ITSS",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1494998556308,
+    "del": false,
+    "dscp": "IT Services and Supply ",
+    "id": "001",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+  Object {
+    "auditUserCd": null,
+    "cd": "HRSRQ",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1494998556315,
+    "del": false,
+    "dscp": "Human Resource Services, Recruitment and Qualifications",
+    "id": "002",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+  Object {
+    "auditUserCd": null,
+    "cd": "MP",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1494998556326,
+    "del": false,
+    "dscp": "Marketing and Promotion ",
+    "id": "003",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+  Object {
+    "auditUserCd": null,
+    "cd": "TELECOM",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1494998556338,
+    "del": false,
+    "dscp": "Telecommunications ",
+    "id": "004",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+  Object {
+    "auditUserCd": null,
+    "cd": "PS",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1494998556344,
+    "del": false,
+    "dscp": "Professional Services",
+    "id": "005",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+]
+`;
+
+exports[`Maintinance services should load natureOfEmployment and match on snapshots 1`] = `
+Array [
+  Object {
+    "auditUserCd": null,
+    "cd": "S",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1495085761751,
+    "del": false,
+    "dscp": "Self-Employed",
+    "id": "001",
+    "income": null,
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+  Object {
+    "auditUserCd": null,
+    "cd": "C",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1495085761828,
+    "del": false,
+    "dscp": "Casual",
+    "id": "002",
+    "income": null,
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+  Object {
+    "auditUserCd": null,
+    "cd": "R",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1495085761838,
+    "del": false,
+    "dscp": "Regular",
+    "id": "003",
+    "income": null,
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+]
+`;
+
+exports[`Maintinance services should load product and match on snapshots 1`] = `
+Array [
+  Object {
+    "accountType": "Single",
+    "classification": "Savings",
+    "currencyCode": "001",
+    "features": null,
+    "id": "001",
+    "media": "Debit Card",
+    "productGroup": "Deposit",
+    "productImage": null,
+    "productName": "KIDDY SAVER W\\\\/ ATM",
+  },
+  Object {
+    "accountType": "Single",
+    "classification": "Savings",
+    "currencyCode": "001",
+    "features": null,
+    "id": "002",
+    "media": "Debit Card",
+    "productGroup": "Deposit",
+    "productImage": null,
+    "productName": "PLATINUM SAVINGS W\\\\/ ATM",
+  },
+]
+`;
+
+exports[`Maintinance services should load sourceOfFunds and match on snapshots 1`] = `
+Array [
+  Object {
+    "auditUserCd": null,
+    "cd": "PAYROLL",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1495076458771,
+    "del": false,
+    "dscp": "Payroll",
+    "id": "001",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+  Object {
+    "auditUserCd": null,
+    "cd": "BUSINESS",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1495076458779,
+    "del": false,
+    "dscp": "Business",
+    "id": "002",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+  Object {
+    "auditUserCd": null,
+    "cd": "STOCKS",
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1495076458789,
+    "del": false,
+    "dscp": "Dividend Stocks",
+    "id": "003",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+]
+`;
+
+exports[`Maintinance services should load systemStatus and match on snapshots 1`] = `
+Array [
+  Object {
+    "advisoryDt": 1494835456844,
+    "auditUserCd": null,
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1494835456844,
+    "del": false,
+    "id": "002",
+    "msg": "MESSAGE ONE",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+  Object {
+    "advisoryDt": 1494835475897,
+    "auditUserCd": null,
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1494835475897,
+    "del": false,
+    "id": "001",
+    "msg": "MESSAGE TWO",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+]
+`;
+
+exports[`Maintinance services should load task and match on snapshots 1`] = `Array []`;
+
+exports[`Maintinance services should load tips and match on snapshots 1`] = `
+Array [
+  Object {
+    "auditUserCd": null,
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1494835158717,
+    "del": false,
+    "id": "001",
+    "pageName": "PAGE ONE",
+    "tips": "TIPS 1",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+  Object {
+    "auditUserCd": null,
+    "correlationId": null,
+    "createdBy": "SYSTEM",
+    "createdDate": 1494835238102,
+    "del": false,
+    "id": "002",
+    "pageName": "PAGE TWO",
+    "tips": "TIPS 2",
+    "updatedBy": null,
+    "updatedDate": null,
+    "version": 0,
+  },
+]
+`;

@@ -1,0 +1,66 @@
+# stages:
+#   - build_and_push
+
+# build-docker-image-and-push-qa:
+#   stage: build_and_push
+
+#   only:
+#     - qa
+
+#   script:
+#     - export REACTV=$(cat package.json | jq -r '.version')
+#     - echo $REACTV
+#     - docker pull registry.unitas.com:5000/unitas/react-unitas-dashboard:$REACTV
+#     - docker stop react-unitas-dashboard-qa || echo "no react unitas main running"
+#     - docker rm react-unitas-dashboard-qa || echo "no react unitas main container running"
+#     - docker rmi $(docker images --quiet --filter "dangling=true") || echo "no dangling images running"
+#     - docker run -d -v /opt/logs-qa:/opt/logs -v /opt/config:/opt/config -e "REACT_ENV=qa" -p 3231:3231 --name react-unitas-dashboard-qa registry.unitas.com:5000/unitas/react-unitas-dashboard:$REACTV
+#     #- ssh root@registry.unitas.com -v 'cd /bpi/dockertars && docker load -i react-unitas-dashboard.tar'
+#     #- ssh root@registry.unitas.com -v 'docker stop react-unitas-dashboard || echo "" && docker rm react-unitas-dashboard || echo "" && docker rmi $(docker images --quiet --filter "dangling=true") || echo "" && docker run -d --restart=always -e "REACT_ENV=prod" -p 3331:3331 --name react-unitas-dashboard bpi.unitas.com:5000/unitas/react-unitas-dashboard:latest'
+
+# build-docker-image-and-push-sit:
+#   stage: build_and_push
+
+#   only:
+#     - sit
+
+#   script:
+#     - export REACTV=$(cat package.json | jq -r '.version')
+#     - echo $REACTV
+#     - ssh root@registry.unitas.com -v 'docker pull registry.unitas.com:5000/unitas/react-unitas-dashboard:'$REACTV 
+#     - ssh root@registry.unitas.com -v 'docker stop react-unitas-dashboard || echo "no react unitas main running" && docker rm react-unitas-dashboard || echo "no react unitas main container running" && docker rmi $(docker images --quiet --filter "dangling=true") || echo "no dangling images running"'
+#     - ssh root@registry.unitas.com -v 'docker run -d -v /bpi/logs:/opt/logs -v /bpi/config:/opt/config  -e "REACT_ENV=prod" -p 3331:3331 --name react-unitas-dashboard registry.unitas.com:5000/unitas/react-unitas-dashboard:'$REACTV
+#     - ssh root@registry.unitas.com -v 'chmod +x dockersave.sh && bash dockersave.sh react-unitas-dashboard '$REACTV
+#     #- ssh root@registry.unitas.com -v 'cd /bpi/dockertars && docker save registry.unitas.com:5000/unitas/react-unitas-dashboard > react-unitas-dashboard.tar'
+#     #- ssh root@registry.unitas.com -v 'cd /bpi/dockertars && docker load -i react-unitas-dashboard.tar'
+#     #- ssh root@registry.unitas.com -v 'docker stop react-unitas-dashboard || echo "" && docker rm react-unitas-dashboard || echo "" && docker rmi $(docker images --quiet --filter "dangling=true") || echo "" && docker run -d --restart=always -e "REACT_ENV=prod" -p 3331:3331 --name react-unitas-dashboard bpi.unitas.com:5000/unitas/react-unitas-dashboard:latest'
+
+
+
+# build-docker-image-and-push-dev:
+#   stage: build_and_push
+
+#   only:
+
+#     - master
+
+#   script:
+#     - export REACTV=$(cat package.json | jq -r '.version')
+#     - echo $REACTV
+#     - pwd
+#     - cp -r /home/gitlab-runner/dashboard_node_modules.tar.gz node_modules.tar.gz
+#     - ls -l
+#     - pwd
+#     - docker login -u meteor -p password -e kinom@sxchange.com bpi.unitas.com:5000
+#     - docker build -t bpi.unitas.com:5000/unitas/react-unitas-dashboard:$REACTV .
+#     - docker push bpi.unitas.com:5000/unitas/react-unitas-dashboard:$REACTV
+#     - docker pull bpi.unitas.com:5000/unitas/react-unitas-dashboard:$REACTV
+#     - docker stop react-unitas-dashboard || echo "no react unitas main running"
+#     - docker rm react-unitas-dashboard || echo "no react unitas main container running"
+#     - docker rmi $(docker images --quiet --filter "dangling=true") || echo "no dangling images running"
+#     - docker run -d -v /opt/logs:/opt/logs -v /opt/config:/opt/config  -e "REACT_ENV=prod" -p 3331:3331 --name react-unitas-dashboard bpi.unitas.com:5000/unitas/react-unitas-dashboard:$REACTV
+#     - docker tag bpi.unitas.com:5000/unitas/react-unitas-dashboard:$REACTV registry.unitas.com:5000/unitas/react-unitas-dashboard:$REACTV
+#     - docker push registry.unitas.com:5000/unitas/react-unitas-dashboard:$REACTV
+#     #- cd ~/dockertars
+#     #- docker save bpi.unitas.com:5000/unitas/react-unitas-dashboard:latest > react-unitas-dashboard.tar
+#     #- scp react-unitas-dashboard.tar root@registry.unitas.com:/bpi/dockertars
